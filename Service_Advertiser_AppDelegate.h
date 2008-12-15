@@ -18,6 +18,7 @@
     NSManagedObjectContext *managedObjectContext;
 
 	NSMutableArray * netServices;
+	IBOutlet NSArrayController * netServicesController;
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
@@ -29,7 +30,7 @@
 - (void) setupWithCurrentSafariPages;
 - (void) runServicesWithURLsFromEventDescriptor: (NSAppleEventDescriptor *) AED;
 - (void) addServiceWithURLString:(NSString *) URL andName:(NSString *) name;
-- (NSString *) infoString;
+// - (NSString *) infoString;
 
 - (IBAction) reload: (id) sender;
 

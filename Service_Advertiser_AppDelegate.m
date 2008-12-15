@@ -23,6 +23,12 @@
 	return self;
 }
 
+
++ (void)initialize {
+    [self setKeys:[NSArray arrayWithObjects:@"netServices",nil] triggerChangeNotificationsForDependentKey:@"infoString"];
+}
+
+
 - (void) awakeFromNib {
 	[self setupWithCurrentSafariPages];
 }
@@ -38,7 +44,7 @@
 	for (MyNetService * myNS in netServices) {
 		[myNS.netService stop];
 	}
-	[netServices removeAllObjects];
+	[netServicesController removeObjects:[netServicesController arrangedObjects]];
 	
 	// get current pages from Safari
 	NSURL * scriptURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Safari URLs" ofType:@"scpt"]];
@@ -60,7 +66,6 @@
 		NSString * name = [[pageInfoAED descriptorAtIndex:2] stringValue];
 		[self addServiceWithURLString:URL andName:name];
 	}
-	self.netServices = netServices; // idiotic because I'm too stupid for bindings
 }
 
 - (void) addServiceWithURLString:(NSString *) URL andName:(NSString *) name {
@@ -75,14 +80,16 @@
 	myNS.URLString = URL;
 	myNS.name = name;
 	
-	[netServices addObject:myNS];
+	[netServicesController addObject:myNS];
 }
 
 
+
+/*
 - (NSString *) infoString {
-	return [NSString stringWithFormat:NSLocalizedString(@"%i Safari bookmarks advertised via Bonjour", @"# Safari bookmarks advertised via Bonjour"), [netServices count]];
+	return [NSString stringWithFormat:NSLocalizedString(@"%i Safari bookmarks advertised via Bonjour", @"# Safari bookmarks advertised via Bonjour"), [[netServicesController content] count]];
 }
-
+*/
 
 
 

@@ -10,6 +10,7 @@
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		6C04DBF50EF5B7A200412B7F /* MyNetService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C04DBF40EF5B7A200412B7F /* MyNetService.m */; };
 		6CA114D40EE6989700A2EC15 /* Safari URLs.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 6CA114C80EE6974C00A2EC15 /* Safari URLs.scpt */; };
+		6CB18BB10EF71D14000070E0 /* document.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6CB18BAF0EF71D02000070E0 /* document.icns */; };
 		770B37ED0679A11B001EADE2 /* Service_Advertiser_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Service_Advertiser_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* Service_Advertiser_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* Service_Advertiser_AppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -28,6 +29,8 @@
 		6C04DBF30EF5B7A200412B7F /* MyNetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNetService.h; sourceTree = "<group>"; };
 		6C04DBF40EF5B7A200412B7F /* MyNetService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNetService.m; sourceTree = "<group>"; };
 		6CA114C80EE6974C00A2EC15 /* Safari URLs.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = "Safari URLs.scpt"; sourceTree = "<group>"; };
+		6CB18BA90EF71AD0000070E0 /* InternetLocationGeneric.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = InternetLocationGeneric.icns; path = /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/InternetLocationGeneric.icns; sourceTree = "<absolute>"; };
+		6CB18BAF0EF71D02000070E0 /* document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = document.icns; path = /Applications/Safari.app/Contents/Resources/document.icns; sourceTree = "<absolute>"; };
 		770B37EC0679A11B001EADE2 /* Service_Advertiser_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Service_Advertiser_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		77C8280B06725ACE000B614F /* Service_Advertiser_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service_Advertiser_AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 			children = (
 				8D1107310486CEB800E47090 /* Info.plist */,
 				6CA114C80EE6974C00A2EC15 /* Safari URLs.scpt */,
+				6CB18BAF0EF71D02000070E0 /* document.icns */,
+				6CB18BA90EF71AD0000070E0 /* InternetLocationGeneric.icns */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
 			);
@@ -181,6 +186,7 @@
 				6CA114D40EE6989700A2EC15 /* Safari URLs.scpt in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
+				6CB18BB10EF71D14000070E0 /* document.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
