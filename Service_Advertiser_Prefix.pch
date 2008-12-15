@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Service Advertiser' target in the 'Service Advertiser' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
