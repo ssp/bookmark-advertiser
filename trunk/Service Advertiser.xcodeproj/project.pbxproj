@@ -37,7 +37,7 @@
 		77C8280B06725ACE000B614F /* Service_Advertiser_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service_Advertiser_AppDelegate.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* Service_Advertiser_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service_Advertiser_AppDelegate.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Service Advertiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Service Advertiser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Bookmark Advertiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bookmark Advertiser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* Service Advertiser.app */,
+				8D1107320486CEB800E47090 /* Bookmark Advertiser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* Service Advertiser */ = {
+		8D1107260486CEB800E47090 /* Bookmark Advertiser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Service Advertiser" */;
+			buildConfigurationList = 26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Bookmark Advertiser" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -149,10 +149,10 @@
 			);
 			dependencies = (
 			);
-			name = "Service Advertiser";
+			name = "Bookmark Advertiser";
 			productInstallPath = "$(HOME)/Applications";
 			productName = "Service Advertiser";
-			productReference = 8D1107320486CEB800E47090 /* Service Advertiser.app */;
+			productReference = 8D1107320486CEB800E47090 /* Bookmark Advertiser.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* Service Advertiser */,
+				8D1107260486CEB800E47090 /* Bookmark Advertiser */,
 			);
 		};
 /* End PBXProject section */
@@ -234,7 +234,7 @@
 				GCC_PREFIX_HEADER = Service_Advertiser_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "Service Advertiser";
+				PRODUCT_NAME = "Bookmark Advertiser";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -249,7 +249,7 @@
 				GCC_PREFIX_HEADER = Service_Advertiser_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "Service Advertiser";
+				PRODUCT_NAME = "Bookmark Advertiser";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -284,7 +284,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Service Advertiser" */ = {
+		26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Bookmark Advertiser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26FC0A850875C7B200E6366F /* Debug */,

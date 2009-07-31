@@ -3,7 +3,7 @@
 //  Service Advertiser
 //
 //  Created by  Sven on 31.07.09.
-//  Copyright 2009 earthlingsoft. All rights reserved.
+//  Copyright 2009 Sven-S. Porst.
 //
 
 #import "NSString+Truncation.h"

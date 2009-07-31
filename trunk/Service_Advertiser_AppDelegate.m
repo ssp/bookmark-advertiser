@@ -2,8 +2,8 @@
 //  Service_Advertiser_AppDelegate.m
 //  Service Advertiser
 //
-//  Created by  Sven on 02.12.08.
-//  Copyright earthlingsoft 2008 . All rights reserved.
+//  Created by Sven on 02.12.08.
+//  Copyright 2008-2009 Sven-S. Porst.
 //
 
 #import "Service_Advertiser_AppDelegate.h"
@@ -131,6 +131,24 @@
 	return [NSString stringWithFormat:NSLocalizedString(@"%i Safari bookmarks advertised via Bonjour", @"# Safari bookmarks advertised via Bonjour"), [[netServicesController content] count]];
 }
 */
+
+
+
+- (IBAction) openGoogleCode:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://code.google.com/p/service-advertiser/"]];
+}
+
+
+- (IBAction) sendEMail:(id)sender {
+	NSString * theURL = [NSString stringWithFormat:@"mailto:ssp-web%%40earthlingsoft.net?subject=Bookmark%%20Advertiser%%20%@", [self myVersionString]];
+	NSURL * myURL = [NSURL URLWithString:theURL];
+	[[NSWorkspace sharedWorkspace] openURL:myURL];
+}
+
+
+- (NSString*) myVersionString {
+	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+}
 
 
 @end
