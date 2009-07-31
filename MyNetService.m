@@ -10,5 +10,27 @@
 
 
 @implementation MyNetService
-@synthesize name, URLString, netService;
+@synthesize name, URLString, netService, canActivate;
+
+- (NSInteger) publishedState {
+  return publishedState;
+}
+
+
+- (void) setPublishedState: (NSInteger) newPublished {
+  if (newPublished != publishedState) {
+    publishedState = newPublished;
+    if (newPublished == NSMixedState) {
+      [self.netService publish];
+    }
+    else if (newPublished == NSOnState) {
+      
+    }
+    else if (newPublished == NSOffState) {
+      [self.netService stop];
+    }
+  }
+}
+
+
 @end

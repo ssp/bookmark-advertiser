@@ -13,10 +13,13 @@
 	NSNetService * netService;
 	NSString * name;
 	NSString * URLString;
+  BOOL canActivate;
+  NSInteger publishedState;
 }
 
 @property (retain) NSNetService * netService;
 @property (retain) NSString * name;
 @property (retain) NSString * URLString;
-
+@property BOOL canActivate;
+@property NSInteger publishedState;
 @end
