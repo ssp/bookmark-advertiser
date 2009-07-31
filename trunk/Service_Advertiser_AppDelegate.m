@@ -75,7 +75,7 @@
   /* DNS-SD Service names may only be 63 bytes of UTF-8 in length. Shorten the name as needed */
   NSString * shorterName = [name truncateWithEllipsisToUTF8Length:63];
   
-	NSNetService * netService = [[NSNetService alloc] initWithDomain:@"" type:@"_webbookmark._tcp." name:shorterName port:77777];
+	NSNetService * netService = [[NSNetService alloc] initWithDomain:@"" type:@"_urlbookmark._tcp." name:shorterName port:77777];
   
   MyNetService * myNS = [[MyNetService alloc] init];
   myNS.URLString = URL;
