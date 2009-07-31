@@ -2,8 +2,8 @@
 //  MyNetService.m
 //  Service Advertiser
 //
-//  Created by  Sven on 14.12.08.
-//  Copyright 2008 earthlingsoft. All rights reserved.
+//  Created by Sven on 14.12.08.
+//  Copyright 2008-2009 Sven-S. Porst.
 //
 
 #import "MyNetService.h"

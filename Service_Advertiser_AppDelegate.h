@@ -2,8 +2,8 @@
 //  Service_Advertiser_AppDelegate.h
 //  Service Advertiser
 //
-//  Created by  Sven on 02.12.08.
-//  Copyright earthlingsoft 2008 . All rights reserved.
+//  Created by Sven on 02.12.08.
+//  Copyright 2008-2009 Sven-S. Porst.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -23,6 +23,10 @@
 // - (NSString *) infoString;
 
 - (IBAction) reload: (id) sender;
+
+- (IBAction) openGoogleCode:(id)sender;
+- (IBAction) sendEMail:(id)sender;
+- (NSString*) myVersionString;
 
 @property (retain) NSMutableArray * netServices;
 
