@@ -133,6 +133,10 @@
 */
 
 
+- (IBAction) openWebPage:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://earthlingsoft.net/code/index.html#bookmarkadvertiser"]];
+}
+
 
 - (IBAction) openGoogleCode:(id)sender {
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://code.google.com/p/service-advertiser/"]];
