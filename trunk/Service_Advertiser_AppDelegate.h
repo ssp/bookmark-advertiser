@@ -24,6 +24,7 @@
 
 - (IBAction) reload: (id) sender;
 
+- (IBAction) openWebPage:(id)sender;
 - (IBAction) openGoogleCode:(id)sender;
 - (IBAction) sendEMail:(id)sender;
 - (NSString*) myVersionString;
