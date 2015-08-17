@@ -3,15 +3,14 @@
 //  Service Advertiser
 //
 //  Created by Sven on 02.12.08.
-//  Copyright 2008-2009 Sven-S. Porst.
+//  Copyright 2008-2015 Sven-S. Porst.
 //
 
 #import <Cocoa/Cocoa.h>
 
 
-@interface Service_Advertiser_AppDelegate : NSObject 
-{
-  IBOutlet NSWindow *window;
+@interface Service_Advertiser_AppDelegate : NSObject<NSNetServiceDelegate> {
+	IBOutlet NSWindow *window;
     
 	NSMutableArray * netServices;
 	IBOutlet NSArrayController * netServicesController;
@@ -20,16 +19,18 @@
 - (void) setupWithCurrentSafariPages;
 - (void) runServicesWithURLsFromEventDescriptor: (NSAppleEventDescriptor *) AED;
 - (BOOL) addServiceWithURLString:(NSString *) URL andName:(NSString *) name;
-// - (NSString *) infoString;
 
 - (IBAction) reload: (id) sender;
 
-- (IBAction) openWebPage:(id)sender;
-- (IBAction) openGoogleCode:(id)sender;
-- (IBAction) sendEMail:(id)sender;
-- (NSString*) myVersionString;
 
-@property (retain) NSMutableArray * netServices;
+- (NSImage *) safariBookmarkIcon;
+
+- (IBAction) openWebPage:(id)sender;
+- (IBAction) openGithub:(id)sender;
+- (IBAction) sendEMail:(id)sender;
+- (NSString *) myVersionString;
+
+@property (strong) NSMutableArray * netServices;
 
 
 @end

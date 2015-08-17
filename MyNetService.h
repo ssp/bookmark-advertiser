@@ -3,7 +3,7 @@
 //  Service Advertiser
 //
 //  Created by Sven on 14.12.08.
-//  Copyright 2008-2009 Sven-S. Porst.
+//  Copyright 2008-2015 Sven-S. Porst.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -13,13 +13,14 @@
 	NSNetService * netService;
 	NSString * name;
 	NSString * URLString;
-  BOOL canActivate;
-  NSInteger publishedState;
+	BOOL canActivate;
+	NSInteger publishedState;
 }
 
-@property (retain) NSNetService * netService;
-@property (retain) NSString * name;
-@property (retain) NSString * URLString;
+@property (strong) NSNetService * netService;
+@property (strong) NSString * name;
+@property (strong) NSString * URLString;
 @property BOOL canActivate;
 @property NSInteger publishedState;
+
 @end

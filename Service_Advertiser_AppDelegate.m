@@ -3,7 +3,7 @@
 //  Service Advertiser
 //
 //  Created by Sven on 02.12.08.
-//  Copyright 2008-2009 Sven-S. Porst.
+//  Copyright 2008-2015 Sven-S. Porst.
 //
 
 #import "Service_Advertiser_AppDelegate.h"
@@ -21,11 +21,6 @@
 		netServices = [NSMutableArray arrayWithCapacity:5]; 
 	}
 	return self;
-}
-
-
-+ (void)initialize {
-    [self setKeys:[NSArray arrayWithObjects:@"netServices",nil] triggerChangeNotificationsForDependentKey:@"infoString"];
 }
 
 
@@ -57,7 +52,7 @@
 }
 
 
-- (void) runServicesWithURLsFromEventDescriptor: (NSAppleEventDescriptor *) AED{
+- (void) runServicesWithURLsFromEventDescriptor:(NSAppleEventDescriptor *)AED {
 	// AED should be array with two strings
 	NSAppleEventDescriptor * pageInfoAED;
 	for (int i = 0; i < [AED numberOfItems]; i++) {
@@ -70,37 +65,36 @@
 
 
 - (BOOL) addServiceWithURLString:(NSString *) URL andName:(NSString *) name {
-  BOOL success = NO;
+	BOOL success = NO;
   
-  /* DNS-SD Service names may only be 63 bytes of UTF-8 in length. Shorten the name as needed */
-  NSString * shorterName = [name truncateWithEllipsisToUTF8Length:63];
+	/* DNS-SD Service names may only be 63 bytes of UTF-8 in length. Shorten the name as needed */
+	NSString * shorterName = [name truncateWithEllipsisToUTF8Length:63];
   
 	NSNetService * netService = [[NSNetService alloc] initWithDomain:@"" type:@"_urlbookmark._tcp." name:shorterName port:77777];
   
-  MyNetService * myNS = [[MyNetService alloc] init];
-  myNS.URLString = URL;
-  myNS.name = name;
-  [netServicesController addObject:myNS];
+	MyNetService * myNS = [[MyNetService alloc] init];
+	myNS.URLString = URL;
+	myNS.name = name;
+	[netServicesController addObject:myNS];
 
-  if ([URL UTF8DataLength] + 4 > 255) {
-    /* URL is too long to fit into a TXT Record field */
-    myNS.canActivate = NO;
-  }
-  else {
-    /* DNS-SD key value pair in TXT-Records are a maximum of 255 UTF-8 bytes in length. Truncate as needed */
-    NSString * shorterName = [name truncateWithEllipsisToUTF8Length: 255 - 5];
-    NSDictionary * TXTRecordDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                    URL, @"URL", shorterName, @"name", nil];
-    success = [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:TXTRecordDict]];
-    if (success) {
-      [netService setDelegate:self];
-      
-      myNS.netService = netService;
-      myNS.canActivate = YES;
-      myNS.publishedState = NSMixedState;
-    }
-  }
-  return success;
+	if ([URL UTF8DataLength] + 4 > 255) {
+		/* URL is too long to fit into a TXT Record field */
+		myNS.canActivate = NO;
+	}
+	else {
+		/* DNS-SD key value pair in TXT-Records are a maximum of 255 UTF-8 bytes in length. Truncate as needed */
+		NSString * shorterName = [name truncateWithEllipsisToUTF8Length: 255 - 5];
+		NSDictionary * TXTRecordDict = @{@"URL":URL, @"name":shorterName};
+		success = [netService setTXTRecordData:[NSNetService dataFromTXTRecordDictionary:TXTRecordDict]];
+		if (success) {
+			[netService setDelegate:self];
+	  
+			myNS.netService = netService;
+			myNS.canActivate = YES;
+			myNS.publishedState = NSMixedState;
+		}
+	}
+	return success;
 }
 
 
@@ -126,11 +120,9 @@
 }
 
 
-/*
-- (NSString *) infoString {
-	return [NSString stringWithFormat:NSLocalizedString(@"%i Safari bookmarks advertised via Bonjour", @"# Safari bookmarks advertised via Bonjour"), [[netServicesController content] count]];
+- (NSImage *) safariBookmarkIcon {
+	return [[NSWorkspace sharedWorkspace] iconForFileType:@"com.apple.web-internet-location"];
 }
-*/
 
 
 - (IBAction) openWebPage:(id)sender {
@@ -138,8 +130,8 @@
 }
 
 
-- (IBAction) openGoogleCode:(id)sender {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://code.google.com/p/service-advertiser/"]];
+- (IBAction) openGithub:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/ssp/bookmark-advertiser"]];
 }
 
 

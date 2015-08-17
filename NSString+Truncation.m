@@ -3,7 +3,7 @@
 //  Service Advertiser
 //
 //  Created by  Sven on 31.07.09.
-//  Copyright 2009 Sven-S. Porst.
+//  Copyright 2009-2015 Sven-S. Porst.
 //
 
 #import "NSString+Truncation.h"
@@ -29,7 +29,7 @@
 
   while ( dataLength > maxLength ) {
     /* 1 UTF-8 char can be 4 bytes, so delete 1 char for each 4 bytes over the maximum length */
-    NSInteger charsToDelete = ceil((dataLength - maxLength) / 4);
+    NSInteger charsToDelete = ceil((dataLength - maxLength) / 4.0);
     NSRange deleteRange = NSMakeRange([s length] - charsToDelete, charsToDelete);
     [s deleteCharactersInRange:deleteRange];
     dataLength = [s UTF8DataLength];
